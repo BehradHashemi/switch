@@ -5,3 +5,39 @@ body {
     align-items: center;
     height: 100%;
 }
+
+.switch {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    background: #c9c9c9;
+    border-radius: 100px;
+    width: 50px;
+    height: 30px;
+    transition: all .4s;
+}
+
+.switch::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    left: 3px;
+}
+
+.switch-input {
+    display: none;
+}
+
+.switch-input:checked+.switch {
+    background: #98f5c9;
+}
+
+.switch-input:checked+.switch::before {
+    background: #fff;
+    left: calc(50px - 22px - 3px);
+}
